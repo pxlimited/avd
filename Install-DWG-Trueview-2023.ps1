@@ -62,14 +62,14 @@ catch {
 try {
     Start-Process -filepath C:\temp\Autodesk\Setup.exe -Wait -ErrorAction Stop -ArgumentList '--silent'
     if (Test-Path "C:\Program Files\Autodesk\DWG Trueview 2023 - English\dwgviewr.exe") {
-        Write-Log "DWG Trueview has been installed"
+        Write-Host "DWG Trueview has been installed"
     }
     else {
-        write-log "Error locating the DWG Trueview executable"
+        write-Host "Error locating the DWG Trueview executable"
     }
 }
 catch {
     $ErrorMessage = $_.Exception.message
-    write-log "Error installing DWG Trueview: $ErrorMessage"
+    write-Host "Error installing DWG Trueview: $ErrorMessage"
 }
 #endregion
