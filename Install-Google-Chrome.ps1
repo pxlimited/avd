@@ -56,18 +56,18 @@ catch {
 
 
 
-#region Adobe Acrobat Reader
+#region Install Google Chrome
 try {
-    Start-Process -filepath 'C:\temp\googlechromestandaloneenterprise64.zip' -Wait -ErrorAction Stop -ArgumentList '/sAll', '/rs', '/msi', 'EULA_ACCEPT=YES'
-    if (Test-Path "C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRD32.exe") {
-        Write-Host "Acrobat Reader has been installed"
+    Start-Process -filepath msiexec.exe -Wait -ErrorAction Stop -ArgumentList '/i', 'C:\temp\googlechromestandaloneenterprise64.msi', '/quiet'
+    if (Test-Path "C:\Program Files\Google\Chrome\Application\chrome.exe") {
+        Write-Host "Google Chrome has been installed"
     }
     else {
-        write-Host "Error locating the Acrobat Reader executable"
+        write-Host "Error locating the Google Chrome executable"
     }
 }
 catch {
     $ErrorMessage = $_.Exception.message
-    write-Host "Error installing Acrobat Reader: $ErrorMessage"
+    write-Host "Error installing Google Chrome: $ErrorMessage"
 }
 #endregion
