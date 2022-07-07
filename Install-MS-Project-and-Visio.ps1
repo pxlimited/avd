@@ -58,7 +58,7 @@ catch {
 
 #region MS Project and Visio
 try {
-    Start-Process -filepath 'C:\temp\MS-Project-and-Visio\setup.exe' -Wait -ErrorAction Stop -ArgumentList '/configure Add-Project-and-Visio.xml'
+    Start-Process -filepath 'C:\temp\MS-Project-and-Visio\setup.exe' -WorkingDirectory "C:\temp\MS-Project-and-Visio" -Wait -ErrorAction Stop -ArgumentList '/configure Add-Project-and-Visio.xml'
     if (Test-Path "C:\Program Files\Microsoft Office\root\Office16\WINPROJ.EXE") {
         Write-Host "Project and Visio have been installed"
     }
