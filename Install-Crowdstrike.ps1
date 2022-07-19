@@ -59,7 +59,7 @@ catch {
 #region Crowdstrike
 try {
     Start-Process -filepath 'C:\temp\WindowsSensor.LionLanner.exe' -Wait -ErrorAction Stop -ArgumentList '/install', '/quiet', '/norestart', 'CID=403E53443A304DF0AB144C2B4859BB41-71'
-    if (Test-Path "C:\Program Files (x86)\Adobe\Crowdstrike DC\Reader\AcroRD32.exe") {
+    if (Test-Path "C:\Program Files\Crowdstrike\CSFalconService.exe") {
         Write-Host "Crowdstrike has been installed"
     }
     else {
