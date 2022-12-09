@@ -122,7 +122,7 @@ $LanguageList.Add("de-de")
 Set-WinUserLanguageList $LanguageList -force
 
 ##Spanish##
-Add-AppProvisionedPackage -Online -PackagePath $LIPContent\es-es\LanguageExperiencePack.es-es.Neutral.appx -LicensePath $LIPContent\es-es\License.xml
+Add-AppProvisionedPackage -Online -PackagePath $LIPContent\LocalExperiencePack\es-es\LanguageExperiencePack.es-es.Neutral.appx -LicensePath $LIPContent\LocalExperiencePack\es-es\License.xml
 Add-WindowsPackage -Online -PackagePath $LIPContent\Microsoft-Windows-Client-Language-Pack_x64_es-es.cab
 Add-WindowsPackage -Online -PackagePath $LIPContent\Microsoft-Windows-LanguageFeatures-Basic-es-es-Package~31bf3856ad364e35~amd64~~.cab
 Add-WindowsPackage -Online -PackagePath $LIPContent\Microsoft-Windows-LanguageFeatures-Handwriting-es-es-Package~31bf3856ad364e35~amd64~~.cab
@@ -142,7 +142,7 @@ $LanguageList.Add("es-es")
 Set-WinUserLanguageList $LanguageList -force
 
 ##French##
-Add-AppProvisionedPackage -Online -PackagePath $LIPContent\fr-fr\LanguageExperiencePack.fr-fr.Neutral.appx -LicensePath $LIPContent\fr-fr\License.xml
+Add-AppProvisionedPackage -Online -PackagePath $LIPContent\LocalExperiencePack\fr-fr\LanguageExperiencePack.fr-fr.Neutral.appx -LicensePath $LIPContent\LocalExperiencePack\fr-fr\License.xml
 Add-WindowsPackage -Online -PackagePath $LIPContent\Microsoft-Windows-Client-Language-Pack_x64_fr-fr.cab
 Add-WindowsPackage -Online -PackagePath $LIPContent\Microsoft-Windows-LanguageFeatures-Basic-fr-fr-Package~31bf3856ad364e35~amd64~~.cab
 Add-WindowsPackage -Online -PackagePath $LIPContent\Microsoft-Windows-LanguageFeatures-Handwriting-fr-fr-Package~31bf3856ad364e35~amd64~~.cab
