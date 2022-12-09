@@ -161,3 +161,6 @@ $LanguageList = Get-WinUserLanguageList
 $LanguageList.Add("fr-fr")
 Set-WinUserLanguageList $LanguageList -force
 
+# Cleanup Temp Files
+Remove-Item -Path "C:\temp\Languages" -Recurse
+Remove-Item -Path "C:\temp\Language-Files" -Recurse
